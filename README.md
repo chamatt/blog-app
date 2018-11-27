@@ -1,1 +1,3 @@
-"# blog-app" 
+Blog App
+
+Um simples blog em javascript
