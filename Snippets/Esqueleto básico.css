@@ -1,0 +1,31 @@
+header {
+  background: #333;
+  position: fixed;
+  height: 48px;
+
+  /*Centralizar horizontal e verticalmente */
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title {
+  color: white;
+  font-family: "Pacifico", Serif;
+  font-size: 18px;
+}
+
+.footer-container {
+  background: #333;
+  height: 48px;
+  color: white;
+  margin-top: 10em;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  padding-top: 100px;
+}
