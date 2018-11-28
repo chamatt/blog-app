@@ -24,12 +24,15 @@ function ObterPosts() {
   const listaDePosts = axios
     .get("http://localhost:3000/posts")
     .then(resposta => {
-      console.log(resposta);
       const ListaDePosts = resposta.data.map(post =>
         PostTemplate(post.title, post.body, post.image, post.id)
-      );
-      const PostsJuntos = ListaDePosts.join();
-      secaoblog.innerHTML = PostsJuntos;
+      ); // Faz uma Array com os posts no formato do template
+      let PostsJuntos = ListaDePosts.reverse().join(); // Junta todos os posts em uma string só
+      if (ListaDePosts.length == 0)
+        PostsJuntos = `<div class="alert alert-info" role="alert">
+      Nenhum post! Crie um novo!
+    </div>`;
+      secaoblog.innerHTML = PostsJuntos; // Insere a string dentro da seção dos posts
     });
 }
 
@@ -40,7 +43,6 @@ formulario.addEventListener("submit", event => {
     body: formulario.children.body.value,
     image: formulario.children.image.value
   }; // Pega os dados do formulário
-  console.log(dadosDoFormulario);
   EnviarPost(dadosDoFormulario); // Chama a função que vai realizar a requisição
 });
 
