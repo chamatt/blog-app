@@ -38,6 +38,12 @@
             name="body"
             placeholder="Corpo"
           ></textarea>
+          <input
+            class="form-control add-post-title"
+            type="text"
+            name="image"
+            placeholder="URL da Imagem"
+          />
           <div class="text-center">
             <button
               type="submit"
@@ -49,25 +55,10 @@
         </form>
       </div>
 
-      <section class="blog-container">
-        <h1 class="text-center mt-4 blog-title-header">Posts</h1>
-        <hr class="blog-title-separator" />
-
-        <article class="blog-post-container" data-title-id="1">
-          <div class="blog-post-title">Título do post 3</div>
-          <div class="blog-post-body">
-            Esse é um teste de texto do blog, assim que o conteúdo vai aparecer,
-            você também pode colocar imagens aqui se desejar.
-          </div>
-        </article>
-
-        <article class="blog-post-container" data-title-id="1">
-          <div class="blog-post-title">Título do post 2</div>
-          <div class="blog-post-body">
-            Esse é um teste de texto do blog, assim que o conteúdo vai aparecer,
-            você também pode colocar imagens aqui se desejar.
-          </div>
-        </article>
+      <h1 class="text-center mt-4 blog-title-header">Posts</h1>
+      <hr class="blog-title-separator" />
+      <section class="blog-container" id="blog">
+        <div class="text-center">Carregando...</div>
       </section>
     </main>
 
@@ -91,5 +82,7 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

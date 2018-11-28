@@ -17,3 +17,13 @@
 .blog-post-body {
   padding: 1em;
 }
+
+.blog-post-image {
+  height: 100%;
+  width: 100;
+}
+.blog-post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

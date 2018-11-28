@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "title": "sadfsadfsadfsadfasdfsadfsdfsadfsadfsad",
+      "body": "fasdfasdfdsfsadfasdfsadfsdfasdfsadfasdf",
+      "image": "https://tr1.cbsistatic.com/hub/i/2015/05/07/bec71435-f4a8-11e4-940f-14feb5cc3d2a/04032012figure_a.gif",
+      "id": 1
+    },
+    {
+      "title": "sadfsadfsadfsadfasdfsadfsdfsadfsadfsad",
+      "body": "fasdfasdfdsfsadfasdfsadfsdfasdfsadfasdf",
+      "image": "https://tr1.cbsistatic.com/hub/i/2015/05/07/bec71435-f4a8-11e4-940f-14feb5cc3d2a/04032012figure_a.gif",
+      "id": 2
+    }
+  ]
+}
