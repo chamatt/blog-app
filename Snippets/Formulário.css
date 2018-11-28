@@ -1,0 +1,18 @@
+.add-post-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.add-post-title {
+  margin: 15px;
+}
+
+.add-post-body {
+  margin: 15px;
+}
+
+.add-post-button {
+  margin: 15px;
+  width: 100px;
+}
