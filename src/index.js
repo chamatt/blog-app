@@ -1,7 +1,3 @@
-
-
-
-
 window.onload = () => ObterPosts();
 
 function PostTemplate(titulo, corpo, imagem, id) {
@@ -21,28 +17,21 @@ function PostTemplate(titulo, corpo, imagem, id) {
       </article>`;
 }
 
-
-
-
 function ObterPosts() {
   const secaoblog = document.querySelector("section.blog-container"); // Seleciona o elemento do DOM
 
-  const listaDePosts = axios
-    .get("http://localhost:3000/posts")
-    .then(resposta => {
-      console.log(JSON.stringify(resposta, undefined, 2));
-      const ListaDePosts = resposta.data.map(post =>
-        PostTemplate(post.title, post.body, post.image, post.id)
-      ); // Faz uma Array com os posts no formato do template
-      let PostsJuntos = ListaDePosts.reverse().join(); // Junta todos os posts em uma string só
-      if (ListaDePosts.length == 0)
-        PostsJuntos = `<div class="alert alert-info" role="alert">
+  axios.get("http://localhost:3000/posts").then(resposta => {
+    const ListaDePosts = resposta.data.map(post =>
+      PostTemplate(post.title, post.body, post.image, post.id)
+    ); // Faz uma Array com os posts no formato do template
+    let PostsJuntos = ListaDePosts.reverse().join(); // Junta todos os posts em uma string só
+    if (ListaDePosts.length == 0)
+      PostsJuntos = `<div class="alert alert-info" role="alert">
       Nenhum post! Crie um novo!
     </div>`;
-      secaoblog.innerHTML = PostsJuntos; // Insere a string dentro da seção dos posts
-    });
+    secaoblog.innerHTML = PostsJuntos; // Insere a string dentro da seção dos posts
+  });
 }
-
 
 const formulario = document.querySelector("form");
 
