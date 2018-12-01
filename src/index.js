@@ -52,8 +52,8 @@ function EnviarPost(dadosDoFormulario) {
     .catch(e => console.log(e));
 }
 
-function DeletarPost(e) {
-  const post = e.parentNode.parentNode.parentNode;
+function DeletarPost(elemento) {
+  const post = elemento.parentNode.parentNode.parentNode;
   const id = post.dataset.postId;
-  axios.delete("http://localhost:3000/posts/" + id).then(() => ObterPosts());
+  axios.delete(`http://localhost:3000/posts/${id}`).then(() => ObterPosts());
 }

@@ -1,3 +1,16 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "title": "fgsdfgfdgsdfg",
+      "body": "dfsgdfgfdg",
+      "image": "",
+      "id": 1
+    },
+    {
+      "title": "fgsdfgfdgsdfggsdfgfsdgfsdgfsdg",
+      "body": "dfsgdfgfdgsdfgsdfgsdfgsdf",
+      "image": "",
+      "id": 2
+    }
+  ]
 }
